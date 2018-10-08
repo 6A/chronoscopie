@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "start": "parcel index.pug",
+    "build": "parcel build index.pug -d build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.2.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "dayspan": "^0.12.4",
+    "dayspan-vuetify": "^0.3.2",
+    "gh-pages": "^2.0.1",
+    "material-color-hash": "^0.1.4",
+    "parcel": "^1.10.2",
+    "pug": "^2.0.3",
+    "stylus": "^0.54.5",
+    "typescript": "^3.1.1",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.17",
+    "vuetify": "^1.2.6"
+  },
+  "dependencies": {
+    "vue-hot-reload-api": "^2.3.1"
+  }
+}
