@@ -16,8 +16,6 @@ import 'dayspan-vuetify/dist/lib/dayspan-vuetify.min.css'
 
 Vue.prototype.$chronos = new Chronos()
 
-window.c = Vue.prototype.$chronos
-
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 
@@ -49,9 +47,9 @@ Vue.use(DaySpanVuetify, {
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/', component: Index },
-    { path: '/:group', component: Calendar },
-    { path: '/:group/:date', component: Calendar }
+    { path: '/(chronoscopie/)?', component: Index },
+    { path: '/(chronoscopie/)?:group(\\d+)', component: Calendar },
+    { path: '/(chronoscopie/)?:group(\\d+)/:date', component: Calendar }
   ]
 })
 

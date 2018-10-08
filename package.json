@@ -1,8 +1,9 @@
 {
   "scripts": {
     "start": "parcel index.pug",
-    "build": "parcel build index.pug -d build",
-    "deploy": "gh-pages -d build"
+    "build": "parcel build index.pug -d build --public-url /chronoscopie/",
+    "deploy": "gh-pages -d build",
+    "publish": "npm run build && npm run deploy"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.2.0",

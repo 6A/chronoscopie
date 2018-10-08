@@ -70,15 +70,17 @@
         const weekId = this.$chronos.getWeekId(date
                         ? Date.parse(date)
                         : new Date())
+          
         const events = []
 
         for (let i = 0; i < 3; i++) {
           const week = await this.$chronos.getWeek(weekId + i, group)
 
           this.loadWeekIntoEvents(week, events)
+          this.events = events
         }
-        
-        this.events = events
+
+        this.$forceUpdate()
       }
     }
   }
